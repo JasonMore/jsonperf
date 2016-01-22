@@ -1,7 +1,15 @@
-Intel Core i7-3720QM 2.6ghz
+MacBook Pro i7 2.3 Ghz Late-2013
 
-node 5.5
-average: 46.327025500000005
+Parse cities.json to most basic supported in-memory structure
 
-dotNet 4.5 (release mode)
-average: 265.390665
+```
+Node.js 5.5
+average: ~40ms
+
+C# .NET 4.5 (release mode)
+average: ~120ms
+
+Groovy 2.4.5, JVM 1.8.0_60
+average: ~182ms
+
+```

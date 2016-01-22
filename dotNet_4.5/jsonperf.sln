@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jsonperf", "jsonperf\jsonperf.csproj", "{49DD682F-725C-4EEC-8512-AE48E217D434}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jsonperf", "jsonperf.csproj", "{49DD682F-725C-4EEC-8512-AE48E217D434}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
