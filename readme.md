@@ -1,6 +1,6 @@
 MacBook Pro i7 2.3 Ghz Late-2013
 
-Parse cities.json to most basic supported in-memory structure
+Parse cities.json `2.42 MB` to most basic supported in-memory structure
 
 ```
 Node.js 5.5
