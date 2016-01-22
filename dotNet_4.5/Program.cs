@@ -13,32 +13,27 @@ namespace jsonperf
     {
         static void Main(string[] args)
         {
-            var json = File.ReadAllText("../../../../cities.json");
+            var json = File.ReadAllText("../../../cities.json");
             var times = new List<double>();
-
 
             for (int i = 0; i < 20; i++)
             {
-                var ts = parseJson(json);
+                var stopWatch = new Stopwatch();
+                stopWatch.Start();
+                var cities = JsonConvert.DeserializeObject<IEnumerable<City>>(json);
+                stopWatch.Stop();
+
+                TimeSpan ts = stopWatch.Elapsed;
+
+                Console.WriteLine("Number of cities: " + cities.Count());
+                Console.WriteLine(ts.TotalMilliseconds.ToString(), "RunTime");
+
                 times.Add(ts.TotalMilliseconds);
             }
 
             Console.WriteLine("average: " + times.Average());
             Console.ReadKey();
         }
-
-        static TimeSpan parseJson(string json) {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            var cities = JsonConvert.DeserializeObject<IEnumerable<City>>(json);
-            Console.WriteLine("Number of cities: " + cities.Count());
-            stopWatch.Stop();
-
-            TimeSpan ts = stopWatch.Elapsed;
-            Console.WriteLine(ts.TotalMilliseconds.ToString(), "RunTime");
-
-            return ts;
-        } 
     }
 
     class City
